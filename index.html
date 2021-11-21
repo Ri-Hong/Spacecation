@@ -17,6 +17,18 @@
     Your browser does not support the video tag.
   </video>
 
+  <video id="venusVideo" width="100%" hidden >
+    <source src="pictures/Venus.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+
+  <video id="mercuryVideo" width="100%" hidden >
+    <source src="pictures/Mercury.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+
 
   <body>
     <div class="video-background">
@@ -32,7 +44,7 @@
 
       <div class="card-container">
         
-        <a onclick="playVid()" class="card">
+        <a onclick="playMarsVid()" class="card">
           <div class="left-side">
             <h1 class="planet-header">Mars</h1>
             <p class="planet-description">A large red planet that humans plan on populating in the future.</p>
@@ -42,7 +54,7 @@
           </div>
         </a>
 
-        <a href="mars.html" class="card">
+        <a onclick="playVenusVid()" class="card">
           <div class="left-side">
             <h1 class="planet-header">Venus</h1>
             <p class="planet-description">A small grey planet where one day is longer than a year! That means that the average human lifespan on Venus is 80 days!</p>
@@ -52,7 +64,7 @@
           </div>
         </a>
 
-        <a href="mars.html" class="card">
+        <a onclick="playMercuryVid()" class="card">
           <div class="left-side">
             <h1 class="planet-header">Mercury</h1>
             <p class="planet-description">The smallest planet in our solar system is closest to the sun.</p>
@@ -68,17 +80,38 @@
 
   <script> 
     var marsVideo = document.getElementById("marsVideo"); 
-    
-    marsVideo.addEventListener('ended',myHandler,false);
-    function myHandler(e) {
+    var venusVideo = document.getElementById("venusVideo"); 
+    var mercuryVideo = document.getElementById("mercuryVideo"); 
+
+    marsVideo.addEventListener('ended', marsHandler,false);
+    function marsHandler(e) {
       window.location.href = "mars.html";
     }
 
-    function playVid() { 
+    venusVideo.addEventListener('ended',venusHandler,false);
+    function venusHandler(e) {
+      window.location.href = "venus.html";
+    }
+
+    mercuryVideo.addEventListener('ended',mercuryHandler,false);
+    function mercuryHandler(e) {
+      window.location.href = "mercury.html";
+    }
+
+    function playMarsVid() { 
       marsVideo.removeAttribute("hidden");
       marsVideo.play(); 
     } 
+
+    function playVenusVid() { 
+      venusVideo.removeAttribute("hidden");
+      venusVideo.play(); 
+    }     
     
+    function playMercuryVid() { 
+      mercuryVideo.removeAttribute("hidden");
+      mercuryVideo.play(); 
+    } 
   </script> 
 
 </html>
