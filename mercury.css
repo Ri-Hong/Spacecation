@@ -140,7 +140,7 @@ body {
 .card-text {
     height: max-content;
     width: 85%;
-    font-size: 15px;
+    font-size: 20px;
     margin: 2vh 0 2vh 5vh;
     /* border: 1px solid red; */
     opacity: 0;
@@ -186,8 +186,34 @@ body {
     height: max-content;
     width: 85%;
     font-size: 20px;
-    margin: 2vh 0 2vh 5vh;
+    margin: 2vh auto 2vh auto;
     opacity: 0;
     animation: fade-in-ani 1s ease 3s;
     animation-fill-mode: forwards;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .card {
+        flex-direction: column;
+        height: max-content;
+    }
+  
+    .card-text-container {
+        width: 100vw;
+    }
+
+    .card-text {
+        margin: 3vh;
+    }
+
+    .card-title {
+        margin: 3vh;
+    }
+
+    .card-photo-container {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
 }

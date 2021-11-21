@@ -144,7 +144,7 @@ a {
   height: 300px;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1700px) {
   .right-side {
     transform: translate(50%, -87%);
     z-index: 0;
@@ -156,6 +156,22 @@ a {
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .right-side {
+    transform: translate(90%, -87%);
+    z-index: 0;
+  }
+
+  .left-side {
+    width: 80%;
+    z-index: 20;
+  }
+
+  .card {
+    border: 3px solid red;
+    width: 80%;
+  }
+}
 
 .planet-picture {
   width: 300px;
