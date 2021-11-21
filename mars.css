@@ -37,7 +37,7 @@ body {
     height: 10px;
     width: 50%;
     margin-bottom: 15vh;
-    animation: banner-ani 1s ease 3s;
+    animation: fade-in-ani 1s ease 3s;
     animation-fill-mode: forwards;
 }
 
@@ -48,7 +48,7 @@ body {
     height: max-content;
     width: 50%;
     margin-bottom: 10vh;
-    animation: banner-ani 1s ease 3.5s;
+    animation: fade-in-ani 1s ease 3.5s;
     animation-fill-mode: forwards;
 }
 
@@ -58,7 +58,7 @@ body {
     height: 75px;
     background: black;
     border: 2px solid white;
-    animation: banner-ani 1s ease 4s;
+    animation: fade-in-ani 1s ease 4s;
     animation-fill-mode: forwards;
 }
 
@@ -94,7 +94,7 @@ body {
     }
 }
 
-@keyframes banner-ani {
+@keyframes fade-in-ani {
     from {
         opacity: 0;
     }
@@ -115,6 +115,9 @@ body {
     /* border: 3px solid blue; */
     height: max-content;
     padding: 5vh;
+    opacity: 0;
+    animation: fade-in-ani 1s ease 5s;
+    animation-fill-mode: forwards;
 }
 
 .card {
@@ -135,6 +138,9 @@ body {
     width: 85%;
     font-size: 4vw;
     margin: 5vh 0 0 5vh;
+    opacity: 0;
+    animation: fade-in-ani 1s ease 5s;
+    animation-fill-mode: forwards;
 }
 
 .card-text {
@@ -143,6 +149,9 @@ body {
     font-size: 20px;
     margin: 2vh 0 2vh 5vh;
     /* border: 1px solid red; */
+    opacity: 0;
+    animation: fade-in-ani 1s ease 5s;
+    animation-fill-mode: forwards;
 }
 
 .card-photo-container {
@@ -156,4 +165,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    animation: fade-in-ani 1s ease 5s;
+    animation-fill-mode: forwards;
 }
