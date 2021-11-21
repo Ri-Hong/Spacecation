@@ -24,11 +24,12 @@ body {
 
 .banner-boundary {
     margin: 5vh;
-    padding: 20vh 5% 5vh 5%;
+    padding: 10vh 5% 5vh 5%;
     justify-content: center;
-    height: 65vh;
+    height: 75vh;
     border: 3px solid white;
     border-radius: 15px;
+    z-index: 50;
 }
 
 .title {
@@ -38,8 +39,9 @@ body {
     height: 10px;
     width: 50%;
     margin-bottom: 15vh;
-    animation: fade-in-ani 1s ease 3s;
+    animation: fade-in-ani 1s ease 2.5s;
     animation-fill-mode: forwards;
+    z-index: 50;
 }
 
 .text {
@@ -49,32 +51,9 @@ body {
     height: max-content;
     width: 50%;
     margin-bottom: 10vh;
-    animation: fade-in-ani 1s ease 3.5s;
+    animation: fade-in-ani 1s ease 3s;
     animation-fill-mode: forwards;
-}
-
-.visit-button {
-    opacity: 0;
-    width: 250px;
-    height: 75px;
-    background: black;
-    border: 2px solid white;
-    animation: fade-in-ani 1s ease 4s;
-    animation-fill-mode: forwards;
-}
-
-.visit-button-link {
-    text-decoration: none;
-    color: white;
-    font-size: 2.5vw;
-}
-
-.visit-button:hover {
-    background: white;
-}
-
-.visit-button-link:hover {
-    color: black;
+    z-index: 50;
 }
 
 .banner-planet {
@@ -87,6 +66,7 @@ body {
     transform: translateY(-50%);
     animation: banner-planet-ani 2.5s;
     animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 @keyframes banner-planet-ani {
@@ -106,10 +86,6 @@ body {
 
 /* --------------------- Banner */
 
-.card-section {
-    /* border: 3px solid red; */
-}
-
 .section-title {
     font-size: 5vw;
     text-align: center;
@@ -117,7 +93,7 @@ body {
     height: max-content;
     padding: 5vh;
     opacity: 0;
-    animation: fade-in-ani 1s ease 5s;
+    animation: fade-in-ani 1s ease 4s;
     animation-fill-mode: forwards;
 }
 
@@ -140,7 +116,7 @@ body {
     font-size: 4vw;
     margin: 5vh 0 0 5vh;
     opacity: 0;
-    animation: fade-in-ani 1s ease 5s;
+    animation: fade-in-ani 1s ease 4s;
     animation-fill-mode: forwards;
 }
 
@@ -151,7 +127,7 @@ body {
     margin: 2vh 0 2vh 5vh;
     /* border: 1px solid red; */
     opacity: 0;
-    animation: fade-in-ani 1s ease 5s;
+    animation: fade-in-ani 1s ease 4s;
     animation-fill-mode: forwards;
 }
 
@@ -167,8 +143,9 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: fade-in-ani 1s ease 5s;
+    animation: fade-in-ani 1s ease 4s;
     animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 /* ------------------------- Info */
@@ -184,7 +161,7 @@ body {
     height: max-content;
     padding: 5vh;
     opacity: 0;
-    animation: fade-in-ani 1s ease 5s;
+    animation: fade-in-ani 1s ease 3s;
     animation-fill-mode: forwards;
 }
 
@@ -194,6 +171,6 @@ body {
     font-size: 20px;
     margin: 2vh 0 2vh 5vh;
     opacity: 0;
-    animation: fade-in-ani 1s ease 5s;
+    animation: fade-in-ani 1s ease 3s;
     animation-fill-mode: forwards;
 }
