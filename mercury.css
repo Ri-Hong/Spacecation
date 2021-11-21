@@ -58,6 +58,21 @@ body {
     animation-fill-mode: forwards;
 }
 
+@media only screen and (max-width: 960px) {
+    .title {
+        font-size: 10vw;
+        width: 100%;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+
+    }
+    
+    .text {
+        font-size: 4vw;
+        width: 100%;
+    }
+}
+
 .banner-planet {
     width: 90%;
     height: 90%;
