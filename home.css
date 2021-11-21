@@ -73,7 +73,7 @@ a {
   justify-content: space-around;
   max-height: 350px;
   position: absolute;
-  bottom: 100px;
+  bottom: 3%;
   width: 100%;
   margin-top: 30%;
 }
@@ -99,25 +99,26 @@ a {
     width: 100%;
   }  
 
+  .card {
+    height: 350px;
+    margin: 20px 0 20px 0;
+  }
 }
 
 .card {
   background-image: url(pictures/CardBackground.png);
-  height: 350px;
-  width: 500px;
+  max-height: 300px;
+  width: 25%;
   border-radius: 30px;
   padding: 20px;
-  margin: 20px 0 20px 0;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: 5px 5px 5px black;
   display: block;
   text-decoration: none;
 }
 
-
-
 .planet-header {
-  height: 20%;
+  height: 25%;
   font-size: 60px;
   color: #fff;
 }
@@ -127,6 +128,7 @@ a {
   z-index: 20;
   font-size: 30px;
   color: #fff;
+  position: relative;
 }
 
 .left-side {
@@ -137,13 +139,26 @@ a {
 .right-side {
   position: absolute;
   transform: translate(90%, -87%);
-  z-index: 1;
+  z-index: 0;
   width: 300px;
   height: 300px;
 }
 
+@media only screen and (max-width: 1500px) {
+  .right-side {
+    transform: translate(50%, -87%);
+    z-index: 0;
+  }
+
+  .left-side {
+    width: 80%;
+    z-index: 20;
+  }
+}
+
+
 .planet-picture {
   width: 300px;
   height: 300px;
-  z-index: 1;
+  z-index: 0;
 }
