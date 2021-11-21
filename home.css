@@ -24,14 +24,6 @@ a {
   border: 3px solid red;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  z-index: 99;
-}
 
 .video-background {
   position: absolute;
@@ -110,7 +102,7 @@ a {
 }
 
 .card {
-  background-image: url(pictures/CardBackground90%Transparent.png);
+  background-image: url(pictures/CardBackground.png);
   height: 350px;
   width: 500px;
   border-radius: 30px;
