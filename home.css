@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+  margin: 0;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  /* background-image: url(pictures/HomepageBackground.png); */
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+a {
+  border-radius:100%;
+  display: block;
+  border: 3px solid red;
+}
+
+.banner-image {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 50;
+}
+
+.title-container {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.title{
+  font-size: 8vw;
+  color: #fff;
+  height: 10px;
+  margin-bottom: 15%;
+}
+
+.title-description{
+  font-size: 4vw;
+  height: 10px;
+  color: #fff;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-height: 350px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  margin-top: 30%;
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    overflow-y: visible;
+    background-position: top;
+    position: relative;
+  }
+
+  .banner-image {
+    height: 45vh;
+  }
+  
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    left: 50;
+    right: 50;
+    top: 80vh;
+    width: 100%;
+  }  
+
+}
+
+.card {
+  background-image: url(pictures/CardBackground90%Transparent.png);
+  height: 350px;
+  width: 500px;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px 0 20px 0;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px black;
+  display: block;
+  text-decoration: none;
+}
+
+
+
+.planet-header {
+  height: 20%;
+  font-size: 60px;
+  color: #fff;
+}
+
+.planet-description {
+  height: 90%;
+  z-index: 20;
+  font-size: 30px;
+  color: #fff;
+}
+
+.left-side {
+  width: 60%;
+  z-index: 20;
+}
+
+.right-side {
+  position: absolute;
+  transform: translate(90%, -87%);
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+}
+
+.planet-picture {
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
