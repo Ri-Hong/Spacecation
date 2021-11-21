@@ -1,66 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+  margin: 0;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
 
 body {
-    border: 1px solid rgb(209, 209, 209);
-    margin: 50px;
-    border-radius: 50px;
-    padding: 0;
-    overflow: hidden; 
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: white;
 }
 
-@font-face {
-    font-family: 'font'; 
-    src: url('images/Raleway-Light.ttf'); 
+.logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    padding: 10px 0 0 60px;
 }
 
-.bg {
-    
-    background: #242424;
-    background-image: linear-gradient(to bottom right, #0b013f, rgb(0, 0, 0));
-    font-family: font;
-    /* width: 95%; */
-    /* height: 100%; */
+.banner-boundary {
+    margin: 5vh;
+    padding: 20vh 5% 5vh 5%;
+    justify-content: center;
+    height: 65vh;
+    border: 3px solid white;
+    border-radius: 15px;
 }
 
 .title {
-    position: relative;
-    text-align: center;
+    opacity: 0;
     color: white;
-    font-size: 40px;
-    top: 100px;
-    right: 25%;
+    font-size: 6vw;
+    height: 10px;
+    width: 50%;
+    margin-bottom: 15vh;
+    animation: banner-ani 1s ease 3s;
+    animation-fill-mode: forwards;
 }
 
-.button {
-    text-align: center;
-    background-color: #4CAF50;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 15px 32px;
+.text {
+    opacity: 0;
+    color: white;
+    font-size: 2vw;
+    height: max-content;
+    width: 50%;
+    margin-bottom: 10vh;
+    animation: banner-ani 1s ease 3.5s;
+    animation-fill-mode: forwards;
+}
+
+.visit-button {
+    opacity: 0;
+    width: 250px;
+    height: 75px;
+    background: black;
+    border: 2px solid white;
+    animation: banner-ani 1s ease 4s;
+    animation-fill-mode: forwards;
+}
+
+.visit-button-link {
     text-decoration: none;
-    display: inline-block;
-    font-family: font;
+    color: white;
+    font-size: 2.5vw;
+}
+
+.visit-button:hover {
+    background: white;
+}
+
+.visit-button-link:hover {
+    color: black;
+}
+
+.banner-planet {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    position: absolute;
+    top: 50vh;
+    right: -100%;
+    transform: translateY(-50%);
+    animation: banner-planet-ani 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes banner-planet-ani {
+    to {
+        right: -25%;
+    }
+}
+
+@keyframes banner-ani {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* --------------------- Banner */
+
+.card-section {
+    /* border: 3px solid red; */
+}
+
+.section-title {
+    font-size: 5vw;
+    text-align: center;
+    /* border: 3px solid blue; */
+    height: max-content;
+    padding: 5vh;
+}
+
+.card {
+    /* border: 2px solid white; */
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 0;
+}
+
+.card-text-container {
+    width: 60%;
+    /* border: 1px solid red; */
+}
+
+.card-title {
+    height: max-content;
+    width: 85%;
+    font-size: 4vw;
+    margin: 5vh 0 0 5vh;
+}
+
+.card-text {
+    height: max-content;
+    width: 85%;
     font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
+    margin: 2vh 0 2vh 5vh;
+    /* border: 1px solid red; */
 }
 
-@keyframes animation {
-    0%   {
-        opacity: 0; 
-        left: 100%;
-    }
-    100% {
-        opacity: 1; 
-        left: 50%;
-    }
+.card-photo-container {
+    display: flexbox;
+    width: 40%;
+    /* border: 3px solid blue; */
 }
 
-.image {
-    position: relative;
-    bottom: 600px;
-    left: 50%;
-    animation-name: animation;
-    animation-duration: 4s;
-    height: 480px;
+.card-photo {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
